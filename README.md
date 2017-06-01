@@ -1,1 +1,1 @@
-# MundoInterconnect.github.io
+# obninsk23.github.io as a prototype for mundoInterconnect.com
