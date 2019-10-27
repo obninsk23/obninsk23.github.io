@@ -1,9 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>MundoInterconnect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- link to main stylesheet -->
 <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+<!-- link to accordion stylesheet -->
+<link rel="stylesheet" type="text/css" href="/css/accordion.css">
 
 <!--  Add kenwheeler.github.io/slick/ image slider -->
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -35,8 +40,10 @@
 
 <div>
 <hr>
-<h2>Nov 28 - Nov 30 2019: Seminar "Basics of Fiber Optics"</h2>
-<h3>Coming soon to Guayaquil, Cuenca and Manta, Ecuador in November 23-30 2018 Seminars "Basics of Fiber Optics" with CFOT® FOA International Certification</h3>
+
+<button class="accordion">Nov 28 - Nov 30 2019: Seminar "Basics of Fiber Optics"</button>
+<div class="panel">
+  <h3>Coming soon to Guayaquil, Cuenca and Manta, Ecuador in November 23-30 2018 Seminars "Basics of Fiber Optics" with CFOT® FOA International Certification</h3>
 <p>Próximamente en Guayaquil, Cuenca y Manta Ecuador, del 23 al 30 de Noviembre de 2019 Seminario "Fundamentos de la fibra óptica" con la certificación internacional CFOT® FOA</p>
 <p>You will also learn how GPON works, how to design it and how to maintain it.</p>
 <p>
@@ -47,6 +54,16 @@
   <img src="posters/CFOT-3-2019.jpg">
 </p>
 <p>Click <a href="posters/CFOT-2019.jpg">here</a> to see full resolution flyer.</p>
+</div>
+
+<button class="accordion">Nov 22 - 24 2019 Curso "Técnico de Fibra Óptica CFOT®</button>
+<div class="panel">
+<p>
+  <img src="posters/Cuenca-2019.jpg">
+</p>
+<p><a href="posters/Cuenca-2019.jpg">Haga clic aquí para ver</a> el programa del curso.</p>
+</div>
+
 </div>
 
 </div><!-- /.container -->
@@ -74,6 +91,23 @@
       cssEase: 'linear'
     });
   });
+</script>
+
+<!--  accordion, see https://www.w3schools.com/howto/howto_js_accordion.asp -->
+<script type="text/javascript">
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
 
 </body>
